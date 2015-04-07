@@ -1,1 +1,2 @@
 Just a test 2
+This is Nics test commit on his branch
