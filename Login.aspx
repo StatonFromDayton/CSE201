@@ -4,33 +4,34 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Login</title>
+    <title>Login Page</title>
     <link href="style.css"" rel="Stylesheet" type = "text/css" />
 </head>
 <body>
 
     <form id="form1" runat="server">
     <div>
-        <h1 align="center"> Login Page</h1>
+        <h1 align="center"> Login Page </h1>
     </div>
 
-    <div id="se">
+    <!--<div id="se">
 	        <input type="search" name="mysearch" placeholder="Search...">
-        </div>
+      </div> -->
 
     <ul>
-        <li><a href="Login.aspx">Login</a></li>
-        <li><a href="Default.aspx">Default</a></li>
-        <li><a href="#contact">?????</a></li>
-        <li><a href="#about">??????</a></li>
-        <asp:Login ID="Login1" runat="server" DestinationPageUrl="~/Landing.aspx">
-        </asp:Login>
+        <li><a href="Landing.aspx">Home Page</a></li>
+        <li><a href="Search.aspx">Search Page</a></li>
+        <li><a href="Request.aspx">Request App Page</a></li>
+        <li><a href="Landing.aspx">Home Page</a></li>
     </ul>
 
+    <div id = "login">
+    <asp:Login ID="Login1" runat="server" BackColor="#202424" BorderStyle="Groove" 
+            ForeColor="White" Width="292px">
+    </asp:Login>
+    </div>
 
     </form>
 
-
-    </form>
 </body>
 </html>

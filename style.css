@@ -1,5 +1,5 @@
 ﻿body {
-    background-color: #b2d1e0;
+    background-color: #eef1c2;
 }    
 ul {
     list-style-type: none;
@@ -12,6 +12,7 @@ ul {
 li {
     float: left;
     width: 25%;
+    margin-bottom: 25px;
 }
 
 a:link, a:visited {
@@ -19,7 +20,7 @@ a:link, a:visited {
 
     font-weight: bold;
     color: #FFFFFF;
-    background-color: #006699;
+    background-color: #23a38f;
     text-align: center;
     padding: 4px;
     text-decoration: none;
@@ -27,18 +28,48 @@ a:link, a:visited {
 }
 
 a:hover, a:active {
-    background-color: #0066ca;
+    background-color: #23A3C0;
 }
-#se 
+#search 
 {
    text-align: right;
-   margin-top: -40px;
 }
-#welc{
-    text-align: right;
+#search2
+{
+   color: White;
+   text-align: center;
+   margin-top: 25px;
+   margin: 0 auto;
+   width: 450px;
+   border: Groove;
+   background-color: #202424;
 }
-
+#login
+{
+   width: 253px;
+   text-align: center;
+   margin: 0 auto;  
+}
+#request
+{
+   text-align: center;
+   margin: 0 auto;
+   width: 450px;
+   border: Groove;
+   background-color: #202424;
+   color: White;
+}
+#about
+{
+ background-color: #202424;
+ color: White; 
+ border: Groove; 
+ width: 450px;
+ text-align: center;
+ margin:0 auto;
+ margin-top: -50px;
+}
 #hot
 {
- background-color:  #b2d1e0
+ text-align: center;   
 }

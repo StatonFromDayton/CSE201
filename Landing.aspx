@@ -7,12 +7,7 @@
 <!DOCTYPE html>
 <head>
 <link href="style.css"" rel="Stylesheet" type = "text/css" />
-    <style type="text/css">
-        #form1
-        {
-            height: 528px;
-        }
-    </style>
+<title> Home Page </title>
 </head>
 <body>
 
@@ -21,40 +16,46 @@
 
 
 <h1 align="center"> Home Page</h1>
-<div id="se">
+<!--<div id="se">
 	<input type="search" name="mysearch" placeholder="Search...">
-</div>
+</div>-->
 <ul>
-  <li><a href="Login.aspx">Login</a></li>
-  <li><a href="Default.aspx">Default</a></li>
-  <li><a href="#contact">?????</a></li>
-  <li><a href="#about">??????</a></li>
+  <li><a href="Login.aspx">Login Page</a></li>
+  <li><a href="Search.aspx">Search Page</a></li>
+  <li><a href="Request.aspx">Request App Page</a></li>
+  <li><a href="Landing.aspx">Home Page</a></li>
 </ul>
 
-<h3 style="margin-left: 920px">About</h3>
-<div id="Welc">
-<pre style="margin-left: 760px">Welcome to AppX! This application allows you to search,
+<div id="search">
+<h3>
+    <asp:TextBox ID="TextBox1" runat="server" placeholder="Search..."></asp:TextBox>
+    <asp:Image ID="Image1" runat="server" />
+    <asp:Button ID="Button1" runat="server" Text="Search" />
+    </h3>
+    </div>
+    <div id="about">
+    <h3>About</h3>
+<pre>Welcome to AppX! This application allows you to search,
 rate, and review all of the applications listed on the various
 app stores.</pre>
-    </div>
-
-<h3 style="margin-left: 880px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Hot Apps</h3>
-
-<div id'"hot">
-    <asp:Image ID="Image1" runat="server" Height="150px" 
-        ImageUrl="http://upload.wikimedia.org/wikipedia/en/7/73/Candy_Crush.png" 
-        Width="150px" ImageAlign="Middle" />
-
-
-    <asp:Image ID="Image2" runat="server" Height="150px" 
-        ImageUrl="https://lh6.ggpht.com/1eVPA6Iukw-F4i5xq1ZWicaKBzmprLGw98YhdG20E-wlsHHg3PcKJqbY_fWLdJeGRw=w300" 
-        Width="150px" />
-    <asp:ImageButton ID="ImageButton1" runat="server" Height="150px" 
-        ImageUrl="https://lh6.ggpht.com/onlNBInQHIZtB2rY24BwrEsUUKwE753ao1BAvvhOw2ePEN1IHIUjaR3gvlGd3jyKTdg=w300" 
-        Width="150px" />
-
-
 </div>
+<div id="hot">
+    <h2>Hot Apps</h2>
+    <asp:Image ID="Image3" runat="server" Height="150px" 
+        ImageUrl="https://lh6.ggpht.com/1eVPA6Iukw-F4i5xq1ZWicaKBzmprLGw98YhdG20E-wlsHHg3PcKJqbY_fWLdJeGRw=w300" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <asp:Image ID="Image5" runat="server" Height="150px"
+        ImageUrl="http://upload.wikimedia.org/wikipedia/en/7/73/Candy_Crush.png" 
+        Width="150px" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <asp:Image ID="Image6" runat="server" Height="150px" 
+        
+        ImageUrl="https://lh6.ggpht.com/onlNBInQHIZtB2rY24BwrEsUUKwE753ao1BAvvhOw2ePEN1IHIUjaR3gvlGd3jyKTdg=w300" />
+&nbsp;&nbsp;
+    <br />
+    
+   </div>
+
     </form>
 
 
