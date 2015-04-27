@@ -28,7 +28,7 @@
   <li><a href="Landing.aspx">Home Page</a></li>
   <li><a href="Search.aspx">Search Page</a></li>
   <li><a href="Login.aspx">Login Page</a></li>
-  <li><a href="Default.aspx"> Requested Apps</a></li>
+  <li><a href="RequestedApps.aspx"> Requested Apps Page </a></li>
 </ul>
 <div id = "request">
         <p>

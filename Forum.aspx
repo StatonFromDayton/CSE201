@@ -4,25 +4,32 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Forum Page</title>
+    <link href="style.css"" rel="Stylesheet" type = "text/css" />
 </head>
 <body>
     <form id="form1" runat="server">
     <div>
-    
-        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
-        <br />
-        <br />
-        <br />
-        <asp:TextBox ID="TextBox2" runat="server" Height="161px" Width="355px"></asp:TextBox>
-        <br />
+        <h1 align="center"> Forum Page </h1>
+    </div>
+
+    <ul>
+        <li><a href="Landing.aspx">Home Page</a></li>
+        <li><a href="Search.aspx">Search Page</a></li>
+        <li><a href="Request.aspx">Request App Page</a></li>
+        <li><a href="Login.aspx">Login Page</a></li>
+    </ul>
+
+    <div>
     
         <asp:ListView ID="ListView1" runat="server">
              <LayoutTemplate>
             <table>
                 <thread>
                     <tr>
-                        <th align="center"> Name </th>
+                        <th align="center"> Author </th>
+                        <th>  </th>
+                        <th>  </th>
                         <th align="center"> Content </th>
                     </tr>
                 </thread>
@@ -31,11 +38,44 @@
         </LayoutTemplate>
         <ItemTemplate>
             <tr>
-                <td align="center"> <%# Eval("ForumName")%> </td>
-                <td align="center"> <%# Eval("ForumContent")%></td>
+                <td align="left"> <%# Eval("ForumName")%> </td>
+                <td> </td>
+                <td> </td>
+                <td align="left"> <%# Eval("ForumContent")%></td>
             </tr>
         </ItemTemplate>
         </asp:ListView>
+    
+        <br />
+    
+        <asp:TextBox ID="Author" runat="server" placeholder="Author.."></asp:TextBox>
+        <br />
+        <textarea ID="Content" runat="server" rows="10" cols="40" placeholder="Content.."></textarea>
+        <br />
+        <asp:Button ID="Button1" runat="server" Text="Submit" />
+        <br />
+        <asp:AccessDataSource ID="AccessDataSource1" runat="server" 
+            DataFile="~/App_Data/CSE201_Project.accdb" 
+            DeleteCommand="DELETE FROM [Forum] WHERE [ForumID] = ?" 
+            InsertCommand="INSERT INTO [Forum] ([ForumName], [ForumContent]) VALUES (?, ?)" 
+            SelectCommand="SELECT * FROM [Forum]" 
+            UpdateCommand="UPDATE [Forum] SET [ForumName] = ?, [ForumContent] = ? WHERE [ForumID] = ?">
+            <DeleteParameters>
+                <asp:Parameter Name="ForumID" Type="Int32" />
+            </DeleteParameters>
+            <InsertParameters>
+                <asp:ControlParameter ControlID="Author" Name="ForumName" PropertyName="Text" 
+                    Type="String" />
+                <asp:SessionParameter Name="ForumContent" SessionField="Content" 
+                    Type="String" />
+            </InsertParameters>
+            <UpdateParameters>
+                <asp:Parameter Name="ForumName" Type="String" />
+                <asp:Parameter Name="ForumContent" Type="String" />
+                <asp:Parameter Name="ForumID" Type="Int32" />
+            </UpdateParameters>
+        </asp:AccessDataSource>
+        <br />
     
     </div>
     </form>

@@ -2,7 +2,7 @@
 Partial Class Request
     Inherits System.Web.UI.Page
 
-    Protected Sub Submit_Click(sender As Object, e As System.EventArgs) Handles Submit.Click
+    Protected Sub Submit_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles Submit.Click
         Try
             AccessDataSource1.Insert()
             NameText.Text = ""
