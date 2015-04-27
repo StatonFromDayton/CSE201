@@ -4,30 +4,34 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
-    <style type="text/css">
-        #forum
-        {
-            height: 421px;
-            width: 674px;
-        }
-    </style>
+    <title>Login Page</title>
+    <link href="style.css"" rel="Stylesheet" type = "text/css" />
 </head>
 <body>
+
     <form id="form1" runat="server">
     <div>
-    <h1> Login Page</h1>
-        <p> &nbsp;</p>
-        <p> 
-            <asp:Label ID="Label1" runat="server" Text="User Name"></asp:Label>
-            :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
-        </p>
-    
+        <h1 align="center"> Login Page </h1>
     </div>
-    <asp:Label ID="Label2" runat="server" Text="Password"></asp:Label>
-    :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+
+    <!--<div id="se">
+	        <input type="search" name="mysearch" placeholder="Search...">
+      </div> -->
+
+    <ul>
+        <li><a href="Landing.aspx">Home Page</a></li>
+        <li><a href="Search.aspx">Search Page</a></li>
+        <li><a href="Request.aspx">Request App Page</a></li>
+        <li><a href="Landing.aspx">Home Page</a></li>
+    </ul>
+
+    <div id = "login">
+    <asp:Login ID="Login1" runat="server" BackColor="#202424" BorderStyle="Groove" 
+            ForeColor="White" Width="292px" DestinationPageUrl="~/Request.aspx">
+    </asp:Login>
+    </div>
+
     </form>
+
 </body>
 </html>
