@@ -13,12 +13,14 @@
         <h1 align="center"> Requested Applications </h1>
     </div>
 
-    <ul>
-        <li><a href="Landing.aspx">Home Page</a></li>
-        <li><a href="Search.aspx">Search Page</a></li>
-        <li><a href="Request.aspx">Request App Page</a></li>
-        <li><a href="Login.aspx">Login Page</a></li>
-    </ul>
+<ul>
+  <li><a href="Landing.aspx">Home Page</a></li>
+  <li><a href="Login.aspx">Login Page</a></li>
+  <li><a href="Search.aspx">Search Page</a></li>
+  <li><a href="Forum.aspx">Forum Page</a></li>
+  <li><a href="Request.aspx">Request App Page</a></li>
+  <li><a href="RequestedApps.aspx">Requested Apps Page</a></li>
+</ul>
     <asp:DetailsView ID="DetailsView1" runat="server" AllowPaging="True" 
         AutoGenerateRows="False" DataKeyNames="AppID" DataSourceID="AccessDataSource1" 
         Height="50px" Width="125px">

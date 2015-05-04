@@ -19,12 +19,14 @@
                 onclick="return searchBar_onclick()">
     </div> -->
 
-    <ul>
-        <li><a href="Login.aspx">Login Page</a></li>
-        <li><a href="Landing.aspx">Home Page</a></li>
-        <li><a href="Forum.aspx">Forum Page</a></li>
-        <li><a href="Request.aspx">Request App Page</a></li>
-    </ul>
+<ul>
+  <li><a href="Landing.aspx">Home Page</a></li>
+  <li><a href="Login.aspx">Login Page</a></li>
+  <li><a href="Search.aspx">Search Page</a></li>
+  <li><a href="Forum.aspx">Forum Page</a></li>
+  <li><a href="Request.aspx">Request App Page</a></li>
+  <li><a href="RequestedApps.aspx">Requested Apps Page</a></li>
+</ul>
 
     <div id="search2">
     <p>
