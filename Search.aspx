@@ -68,6 +68,11 @@
                 <td align="center"> <%# Eval("AppVersion")%></td>
                 <td align="center"> <%# Eval("AppPrice")%></td>
                 <td align="center"> <%# Eval("AppDescription")%></td>
+                <td align="right"><asp:HyperLink ID="hyperlink1" 
+                           runat="server" 
+                           Text="Forum"
+                           NavigateURL='<%# EVAL("AppID","~/Forum.aspx?id={0}") %>'>
+                </asp:HyperLink></td>
             </tr>
         </ItemTemplate>
     </asp:ListView>

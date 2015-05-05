@@ -59,8 +59,10 @@
         <asp:AccessDataSource ID="AccessDataSource1" runat="server" 
             DataFile="~/App_Data/CSE201_Project.accdb" 
             DeleteCommand="DELETE FROM [Forum] WHERE [ForumID] = ?" 
-            InsertCommand="INSERT INTO [Forum] ([ForumName], [ForumContent]) VALUES (?, ?)" 
+            InsertCommand="INSERT INTO Forum(ForumName, ForumContent,AppID) VALUES (?, ?,?)" 
             SelectCommand="SELECT * FROM [Forum]" 
+            
+            
             UpdateCommand="UPDATE [Forum] SET [ForumName] = ?, [ForumContent] = ? WHERE [ForumID] = ?">
             <DeleteParameters>
                 <asp:Parameter Name="ForumID" Type="Int32" />
@@ -70,6 +72,7 @@
                     Type="String" />
                 <asp:SessionParameter Name="ForumContent" SessionField="Content" 
                     Type="String" />
+                <asp:QueryStringParameter Name="AppID" QueryStringField="id" />
             </InsertParameters>
             <UpdateParameters>
                 <asp:Parameter Name="ForumName" Type="String" />
@@ -77,7 +80,6 @@
                 <asp:Parameter Name="ForumID" Type="Int32" />
             </UpdateParameters>
         </asp:AccessDataSource>
-        <br />
     
     </div>
     </form>

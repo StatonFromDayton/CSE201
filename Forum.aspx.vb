@@ -10,12 +10,13 @@ Partial Class Forum
 
         Dim conn As New OleDbConnection
         Dim connString As String
+        Dim myID As String = Request.QueryString("id")
 
         connString = WebConfigurationManager.ConnectionStrings("AccessDatabase").ConnectionString
 
         conn.ConnectionString = connString
 
-        Dim cmd As New OleDbCommand("SELECT ForumName, ForumContent FROM Forum", conn)
+        Dim cmd As New OleDbCommand("SELECT ForumName, ForumContent FROM Forum WHERE AppID LIKE '" & myID & "'", conn)
         conn.Open()
 
         Dim da As New OleDbDataAdapter(cmd)
@@ -31,6 +32,7 @@ Partial Class Forum
         If Author.Text <> "" Then
             Try
                 Session("Content") = Content.InnerText
+                Dim myID As String = Request.QueryString("id")
                 AccessDataSource1.Insert()
                 Content.InnerText = ""
                 Author.Text = ""
@@ -41,7 +43,7 @@ Partial Class Forum
 
                 conn.ConnectionString = connString
 
-                Dim cmd As New OleDbCommand("SELECT ForumName, ForumContent FROM Forum", conn)
+                Dim cmd As New OleDbCommand("SELECT ForumName, ForumContent FROM Forum WHERE AppID LIKE '" & myID & "'", conn)
                 conn.Open()
 
                 Dim da As New OleDbDataAdapter(cmd)
